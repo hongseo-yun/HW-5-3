@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import List from './pages/List';
@@ -13,7 +13,9 @@ function App() {
     <Router>
       <div className="container">
         <Routes>
+          <Route path="/" element={<List />} /> 
           <Route path="/list" element={<List />} />
+
           <Route path="/create" element={<Create />} />
           <Route path="/detail/:id" element={<Detail />} />
           <Route path="/update/:id" element={<Update />} />
